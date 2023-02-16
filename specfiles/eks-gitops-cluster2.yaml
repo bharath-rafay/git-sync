@@ -13,7 +13,6 @@ spec:
 apiVersion: rafay.io/v1alpha5
 availabilityZones:
 - us-west-2a
-- us-west-2b
 kind: ClusterConfig
 metadata:
   name: eks-gitops-cluster2-16-02-2023
@@ -23,7 +22,6 @@ managedNodeGroups:
 - amiFamily: AmazonLinux2
   availabilityZones:
   - us-west-2a
-  - us-west-2b
   desiredCapacity: 1
   iam:
     withAddonPolicies:
