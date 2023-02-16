@@ -30,7 +30,7 @@ managedNodeGroups:
       albIngress: true
       autoScaler: true
   instanceType: t3.medium
-  maxSize: 2
+  maxSize: 1
   minSize: 1
   name: managed-ng1
   version: "1.22"
