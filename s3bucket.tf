@@ -1,6 +1,6 @@
 terraform {
   backend "s3" {
-    bucket = "<Bucket Name>"
+    bucket = "bharath-backup-policy"
     key    = "terraform.tfstate"
     region = "us-west-2"
   }
