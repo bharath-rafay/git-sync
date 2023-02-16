@@ -33,7 +33,7 @@ managedNodeGroups:
   name: managed-ng1
   version: "1.22"
   privateNetworking: true
-  volumeSize: 100
+  volumeSize: 80
   volumeType: gp3
 vpc:
   cidr: 192.168.0.0/16
