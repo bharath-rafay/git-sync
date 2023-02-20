@@ -1,6 +1,6 @@
 kind: Cluster
 metadata:
-  name: eks-gitops-cluster2-16-02-2023-13
+  name: eks-gitops1-cluster2-16-02-2023-13
   project: bharath
 spec:
   blueprint: minimal
@@ -16,7 +16,7 @@ availabilityZones:
 - us-west-2b
 kind: ClusterConfig
 metadata:
-  name: eks-gitops-cluster2-16-02-2023-13
+  name: eks-gitops1-cluster2-16-02-2023-13
   region: us-west-2
   version: "1.22"
   # tags:
