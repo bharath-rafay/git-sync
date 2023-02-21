@@ -1,7 +1,7 @@
 apiVersion: infra.k8smgmt.io/v3
 kind: Cluster
 metadata:
-  name: bharath-eks-21-02-02023
+  name: test-cluster-eks
   project: bharath
 spec:
   blueprintConfig:
@@ -9,7 +9,7 @@ spec:
   cloudCredentials: varun-eks
   config:
     metadata:
-      name: bharath-eks-21-02-02023
+      name: test-cluster-eks
       region: us-west-2
       version: "1.24"
     network:
@@ -17,15 +17,15 @@ spec:
         name: aws-cni
     nodeGroups:
     - amiFamily: AmazonLinux2
-      desiredCapacity: 1
+      desiredCapacity: 2
       iam:
         withAddonPolicies:
           autoScaler: true
           imageBuilder: true
-      instanceType: t3.medium
-      maxSize: 1
-      minSize: 1
-      name: ng-f3d82fa8
+      instanceType: m5.xlarge
+      maxSize: 2
+      minSize: 2
+      name: ng-08a7f008
       version: "1.24"
       volumeSize: 80
       volumeType: gp3
@@ -60,10 +60,10 @@ status:
   - reason: pending
     status: "False"
     type: ClusterReady
-  createdAt: "2023-02-21T09:41:36Z"
-  displayName: bharath-eks-21-02-02023
+  createdAt: "2023-02-21T10:51:43Z"
+  displayName: test-cluster-eks
   extra:
     vaultIntegration: {}
-  id: 28djxlk
-  name: bharath-eks-21-02-02023
-  provisionStatus: INFRA_CREATION_INPROGRESS
+  id: 2ln5oek
+  name: test-cluster-eks
+  provisionStatus: INFRA_CREATION_FAILED
