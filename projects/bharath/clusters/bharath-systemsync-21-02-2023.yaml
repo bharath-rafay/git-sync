@@ -1,0 +1,72 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Cluster
+metadata:
+  name: bharath-systemsync-21-02-2023
+  project: bharath
+spec:
+  blueprintConfig:
+    name: minimal
+  cloudCredentials: varun-eks
+  config:
+    metadata:
+      name: bharath-systemsync-21-02-2023
+      region: us-west-2
+      tags:
+        email: bharath.reddy@rafay.co
+        env: dev
+      version: "1.22"
+    network:
+      cni:
+        name: aws-cni
+    nodeGroups:
+    - amiFamily: AmazonLinux2
+      desiredCapacity: 1
+      iam:
+        withAddonPolicies:
+          autoScaler: true
+          imageBuilder: true
+      instanceType: t3.medium
+      maxSize: 1
+      minSize: 1
+      name: ng-0059996e
+      version: "1.22"
+      volumeSize: 50
+      volumeType: gp3
+    vpc:
+      cidr: 192.168.0.0/16
+      clusterEndpoints:
+        privateAccess: true
+        publicAccess: false
+      nat:
+        gateway: Single
+  proxyConfig: {}
+  type: aws-eks
+status:
+  blueprint:
+    name: minimal
+  conditions:
+  - reason: pending
+    status: "False"
+    type: ClusterRegisterSucceeded
+  - reason: pending
+    status: "False"
+    type: ClusterCheckInSucceeded
+  - reason: pending
+    status: "False"
+    type: ClusterNodeSyncSucceeded
+  - reason: pending
+    status: "False"
+    type: ClusterBlueprintSyncSucceeded
+  - reason: pending
+    status: "False"
+    type: ClusterNamespaceSyncSucceeded
+  - reason: pending
+    status: "False"
+    type: ClusterReady
+  createdAt: "2023-02-21T10:26:38Z"
+  displayName: bharath-systemsync-21-02-2023
+  extra:
+    vaultIntegration: {}
+  id: ko8ld6m
+  name: bharath-systemsync-21-02-2023
+  provisionStatus: INFRA_CREATION_INPROGRESS
