@@ -66,4 +66,4 @@ status:
     vaultIntegration: {}
   id: 28djxlk
   name: bharath-eks-21-02-02023
-  provisionStatus: INFRA_CREATION_FAILED
+  provisionStatus: INFRA_CREATION_INPROGRESS
