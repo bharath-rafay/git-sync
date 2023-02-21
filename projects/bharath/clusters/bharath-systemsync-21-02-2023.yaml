@@ -26,7 +26,7 @@ spec:
           autoScaler: true
           imageBuilder: true
       instanceType: t3.medium
-      maxSize: 1
+      maxSize: 2
       minSize: 1
       name: ng-0059996e
       version: "1.22"
