@@ -23,6 +23,21 @@ spec:
       - t3.large
       maxSize: 2
       minSize: 2
+      name: ng
+      tags:
+        email: bharath.reddy@rafay.co
+        env: dev
+      volumeSize: 80
+    - amiFamily: AmazonLinux2
+      desiredCapacity: 2
+      iam:
+        withAddonPolicies:
+          autoScaler: true
+          imageBuilder: true
+      instanceTypes:
+      - t3.large
+      maxSize: 2
+      minSize: 2
       name: kbr
       tags:
         email: bharath.reddy@rafay.co
