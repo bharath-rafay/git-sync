@@ -29,6 +29,22 @@ spec:
         env: dev
       volumeSize: 80
       volumeType: gp3
+    - amiFamily: AmazonLinux2
+      desiredCapacity: 2
+      iam:
+        withAddonPolicies:
+          autoScaler: true
+          imageBuilder: true
+      instanceTypes:
+      - t3.large
+      maxSize: 2
+      minSize: 2
+      name: kbr1
+      tags:
+        email: bharath.reddy@rafay.co
+        env: dev
+      volumeSize: 80
+      volumeType: gp3
     metadata:
       name: bharath-eks-409
       region: us-west-2
