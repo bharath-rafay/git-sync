@@ -1,0 +1,15 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Addon
+metadata:
+  name: helm-nginx
+  project: bharath
+spec:
+  artifact:
+    artifact:
+      chartName: nginx
+      chartVersion: 15.1.4
+      repository: default-bitnami
+    type: Helm
+  namespace: kbr
+  sharing: {}
+  version: "2"

@@ -1,0 +1,15 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: test234
+  project: bharath
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://artifacts/test234/test234.yaml
+    type: Yaml
+  namespace: kbr
+  placement:
+    selector: rafay.dev/clusterName=bharath-eks-nov27
+  version: test234-v1-202311270713120000

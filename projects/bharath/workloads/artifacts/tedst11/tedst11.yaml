@@ -1,0 +1,10 @@
+apiVersion: system.k8smgmt.io/v3
+kind: Project
+metadata:
+  description: for infrastructure management and to enforce governance controls
+  name: central66
+spec:
+  clusterResourceQuota:
+    cpuRequests: "50m"
+  defaultClusterNamespaceQuota:
+    cpuRequests: "10m"

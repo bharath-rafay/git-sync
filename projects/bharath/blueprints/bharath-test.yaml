@@ -1,0 +1,21 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Blueprint
+metadata:
+  name: bharath-test
+  project: bharath
+spec:
+  base:
+    name: default
+    version: 1.19.0
+  customAddons:
+  - name: bharath-test
+    version: "4"
+  driftWebhook:
+    enabled: true
+  sharing:
+    enabled: true
+    projects:
+    - id: dk3rqvk
+      name: defaultproject
+  type: custom
+  version: "4"

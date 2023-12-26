@@ -1,0 +1,16 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Blueprint
+metadata:
+  name: hell
+  project: bharath
+spec:
+  base:
+    name: minimal
+    version: 1.27.0
+  customAddons:
+  - name: bharath-helm
+    version: "1"
+  driftWebhook:
+    enabled: true
+  type: custom
+  version: "3"
