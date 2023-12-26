@@ -18,16 +18,14 @@ spec:
       iam:
         withAddonPolicies:
           autoScaler: true
-          imageBuilder: true
       instanceTypes:
       - t3.large
       maxSize: 2
       minSize: 2
-      name: ng
-      tags:
-        email: bharath.reddy@rafay.co
-        env: dev
+      name: ng-bharath
+      version: "1.27"
       volumeSize: 80
+      volumeType: gp3
     - amiFamily: AmazonLinux2
       desiredCapacity: 2
       iam:
