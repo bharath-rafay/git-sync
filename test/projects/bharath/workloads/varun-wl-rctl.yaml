@@ -1,0 +1,12 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: varun-wl-rctl
+  project: bharath
+spec:
+  artifact:
+    artifact: {}
+    type: Yaml
+  namespace: kbr
+  placement:
+    selector: rafay.dev/clusterName=bharath-eks-07-03-2023

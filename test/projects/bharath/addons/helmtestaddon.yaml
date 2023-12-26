@@ -1,0 +1,14 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Addon
+metadata:
+  name: helmtestaddon
+  project: bharath
+spec:
+  artifact:
+    artifact:
+      chartPath:
+        name: file://artifacts/helmtestaddon/myapp-0.2.0.tgz
+    type: Helm
+  namespace: kbr
+  sharing: {}
+  version: "2"

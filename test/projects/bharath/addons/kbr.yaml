@@ -1,0 +1,20 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Addon
+metadata:
+  name: kbr
+  project: bharath
+spec:
+  artifact:
+    artifact:
+      chartPath:
+        name: file://artifacts/kbr/nginx-13.2.13.tgz
+      valuesPaths:
+      - name: file://artifacts/kbr/values.yaml
+    type: Helm
+  namespace: testns-49
+  sharing:
+    enabled: true
+    projects:
+    - id: dk3rqvk
+      name: defaultproject
+  version: "1"
