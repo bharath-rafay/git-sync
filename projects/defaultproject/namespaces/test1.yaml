@@ -5,4 +5,5 @@ metadata:
     rafay.dev/description: ""
   name: test1
   project: defaultproject
-spec: {}
+spec:
+  resourceQuotas: {}
