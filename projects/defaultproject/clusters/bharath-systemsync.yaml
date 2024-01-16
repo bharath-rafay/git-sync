@@ -26,6 +26,22 @@ spec:
       version: "1.27"
       volumeSize: 80
       volumeType: gp3
+    - amiFamily: WindowsServer2019CoreContainer
+      desiredCapacity: 1
+      iam:
+        withAddonPolicies:
+          autoScaler: true
+          imageBuilder: true
+      instanceTypes:
+      - t3.large
+      maxSize: 1
+      minSize: 1
+      name: bharat-ng1
+      tags:
+        email: bharath.reddy@rafay.co
+        env: dev
+      volumeSize: 20
+      volumeType: gp3
     metadata:
       name: bharath-systemsync
       region: us-west-2
