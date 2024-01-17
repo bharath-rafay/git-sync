@@ -27,7 +27,7 @@ spec:
       volumeSize: 80
       volumeType: gp3
     - amiFamily: WindowsServer2022FullContainer
-      desiredCapacity: 2
+      desiredCapacity: 1
       iam:
         withAddonPolicies:
           autoScaler: true
