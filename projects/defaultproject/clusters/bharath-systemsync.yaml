@@ -7,8 +7,6 @@ spec:
   blueprintConfig:
     name: minimal
     version: Latest
-    name: minimal
-    version: 2.3.0
   cloudCredentials: bharath-eks
   config:
     addons:
