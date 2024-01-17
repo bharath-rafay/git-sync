@@ -14,14 +14,14 @@ spec:
       version: latest
     managedNodeGroups:
     - amiFamily: AmazonLinux2
-      desiredCapacity: 2
+      desiredCapacity: 1
       iam:
         withAddonPolicies:
           autoScaler: true
       instanceTypes:
       - t3.large
       maxSize: 2
-      minSize: 2
+      minSize: 0
       name: bharat-ng
       version: "1.27"
       volumeSize: 80
