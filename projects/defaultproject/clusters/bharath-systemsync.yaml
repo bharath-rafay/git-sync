@@ -5,8 +5,8 @@ metadata:
   project: defaultproject
 spec:
   blueprintConfig:
-    name: default
-    version: Latest
+    name: test
+    version: 1
   cloudCredentials: bharath-eks
   config:
     addons:
@@ -27,7 +27,7 @@ spec:
       volumeSize: 80
       volumeType: gp3
     - amiFamily: WindowsServer2022FullContainer
-      desiredCapacity: 1
+      desiredCapacity: 2
       iam:
         withAddonPolicies:
           autoScaler: true
