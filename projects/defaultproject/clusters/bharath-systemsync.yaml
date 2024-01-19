@@ -5,8 +5,8 @@ metadata:
   project: defaultproject
 spec:
   blueprintConfig:
-    name: minimal
-    version: Latest
+    name: default
+    version: 2.3.0
   cloudCredentials: bharath-eks
   config:
     addons:
