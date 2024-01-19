@@ -7,7 +7,7 @@ spec:
   artifact:
     artifact:
       chartPath:
-        name: file://artifacts/test/airflow-1.0.861-243250-20240105-hotfix-airflow-offcycle-120123-41cec2c6-image-243241-20240105-122releasehf-937f97e2.tgz
+        name: file://artifacts/test/test.tgz
     options:
       force: true
       maxHistory: 10
