@@ -5,7 +5,7 @@ metadata:
   project: defaultproject
 spec:
   blueprintConfig:
-    name: default
+    name: minimal
     version: 2.3.0
   cloudCredentials: bharath-eks
   config:
@@ -14,7 +14,7 @@ spec:
       version: latest
     managedNodeGroups:
     - amiFamily: AmazonLinux2
-      desiredCapacity: 2
+      desiredCapacity: 1
       iam:
         withAddonPolicies:
           autoScaler: true
