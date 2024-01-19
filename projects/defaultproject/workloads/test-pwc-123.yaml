@@ -1,0 +1,20 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: test-pwc-123
+  project: defaultproject
+spec:
+  artifact:
+    artifact:
+      chartPath:
+        name: file://artifacts/test-pwc-123/airflow-1.0.861-243250-20240105-hotfix-airflow-offcycle-120123-41cec2c6-image-243241-20240105-122releasehf-937f97e2.tgz
+    options:
+      force: true
+      maxHistory: 10
+      timeout: 5m0s
+      wait: true
+    type: Helm
+  namespace: test
+  placement:
+    selector: rafay.dev/clusterName=bharath-systemsync
+  version: test-pwc-123-v1-202401190704190000
