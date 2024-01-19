@@ -6,5 +6,12 @@ metadata:
   name: test
   project: defaultproject
 spec:
+  limitRange:
+    container: {}
+    pod: {}
   namespaceMeshPolicyParams: {}
+  placement:
+    labels:
+    - key: rafay.dev/clusterName
+      value: bharath-systemsync
   resourceQuotas: {}
