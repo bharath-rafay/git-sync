@@ -17,3 +17,4 @@ spec:
   namespace: test
   placement:
     selector: rafay.dev/clusterName=bharath-systemsync
+  version: test-pwc-123-v1-202401190704190000
