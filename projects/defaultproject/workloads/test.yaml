@@ -17,3 +17,4 @@ spec:
   namespace: nginx
   placement:
     selector: rafay.dev/clusterName=bharath-systemsync
+  version: test-v1-202401191025450000
