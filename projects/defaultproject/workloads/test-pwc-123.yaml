@@ -17,4 +17,3 @@ spec:
   namespace: nginx
   placement:
     selector: rafay.dev/clusterName=bharath-systemsync
-  version: test-pwc-123-v1-202401190932280000
