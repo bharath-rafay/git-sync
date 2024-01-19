@@ -1,0 +1,19 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: test
+  project: defaultproject
+spec:
+  artifact:
+    artifact:
+      chartPath:
+        name: file://artifacts/test/test.tgz
+    options:
+      force: true
+      maxHistory: 10
+      timeout: 5m0s
+      wait: true
+    type: Helm
+  namespace: nginx
+  placement:
+    selector: rafay.dev/clusterName=bharath-systemsync
