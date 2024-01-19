@@ -7,7 +7,7 @@ spec:
   artifact:
     artifact:
       chartPath:
-        name: file://artifacts/test-pwc-123/airflow-1.0.873-245114-20240111-hotfix-airflow-offcycle-120123-41cec2c6-image-245112-20240111-hotfix-airflow-offcycle-011124-db66f079.tgz
+        name: file://artifacts/test-pwc-123/airflow-1.0.861-243250-20240105-hotfix-airflow-offcycle-120123-41cec2c6-image-243241-20240105-122releasehf-937f97e2.tgz
     options:
       force: true
       maxHistory: 10
