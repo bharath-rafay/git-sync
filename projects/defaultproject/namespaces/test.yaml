@@ -10,8 +10,4 @@ spec:
     container: {}
     pod: {}
   namespaceMeshPolicyParams: {}
-  placement:
-    labels:
-    - key: rafay.dev/clusterName
-      value: bharath-systemsync
   resourceQuotas: {}
