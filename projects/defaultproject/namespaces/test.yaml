@@ -11,5 +11,7 @@ spec:
     pod: {}
   namespaceMeshPolicyParams: {}
   placement:
-    labels: {}
+    labels:
+    - key: rafay.dev/clusterName
+      value: bharath-systemsync
   resourceQuotas: {}
