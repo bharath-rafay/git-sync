@@ -5,6 +5,8 @@ metadata:
   project: defaultproject
 spec:
   artifact:
-    artifact: {}
+    artifact:
+      chartPath:
+        name: file://artifacts/test/test.tgz
     type: Helm
   namespace: nginx
