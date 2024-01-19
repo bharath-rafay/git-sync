@@ -5,8 +5,8 @@ metadata:
   project: defaultproject
 spec:
   blueprintConfig:
-    name: default
-    version: 2.3.0
+    name: minamal
+    version: Latest
   cloudCredentials: bharath-eks
   config:
     addons:
