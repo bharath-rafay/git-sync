@@ -14,7 +14,7 @@ spec:
       version: latest
     managedNodeGroups:
     - amiFamily: AmazonLinux2
-      desiredCapacity: 0
+      desiredCapacity: 1
       iam:
         withAddonPolicies:
           autoScaler: true
