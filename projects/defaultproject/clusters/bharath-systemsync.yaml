@@ -35,7 +35,7 @@ spec:
       instanceTypes:
       - t3.large
       maxSize: 2
-      minSize: 2
+      minSize: 0
       name: bharath-win
       tags:
         email: bharath.reddy@rafay.co
