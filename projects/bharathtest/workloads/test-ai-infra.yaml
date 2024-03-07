@@ -5,6 +5,11 @@ metadata:
   project: bharathtest
 spec:
   artifact:
-    artifact: {}
+    artifact:
+      paths:
+      - name: file://artifacts/test-ai-infra/test-ai-infra.yaml
     type: Yaml
   namespace: testwl
+  placement:
+    selector: rafay.dev/clusterName=testcluster
+  version: test-ai-infra-v1-202403070547380000
