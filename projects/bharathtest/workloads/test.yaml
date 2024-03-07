@@ -1,0 +1,14 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: test-ai-infra
+  project: bharathtest
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://artifacts/test/test.yaml
+    type: Yaml
+  namespace: testwl
+  placement:
+    selector: rafay.dev/clusterName=testcluster
