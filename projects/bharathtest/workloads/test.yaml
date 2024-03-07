@@ -12,3 +12,4 @@ spec:
   namespace: testwl
   placement:
     selector: rafay.dev/clusterName=testcluster
+  version: v1
