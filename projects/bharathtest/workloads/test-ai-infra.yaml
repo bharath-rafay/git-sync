@@ -1,0 +1,10 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: test-ai-infra
+  project: bharathtest
+spec:
+  artifact:
+    artifact: {}
+    type: Yaml
+  namespace: testwl
