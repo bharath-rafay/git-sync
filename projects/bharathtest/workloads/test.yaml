@@ -1,7 +1,7 @@
 apiVersion: apps.k8smgmt.io/v3
 kind: Workload
 metadata:
-  name: test-ai-infra
+  name: test
   project: bharathtest
 spec:
   artifact:
