@@ -5,4 +5,13 @@ metadata:
     rafay.dev/description: ""
   name: test2
   project: bharathtest
-spec: {}
+spec:
+  limitRange:
+    container: {}
+    pod: {}
+  namespaceMeshPolicyParams: {}
+  placement:
+    labels:
+    - key: rafay.dev/clusterName
+      value: testcluster
+  resourceQuotas: {}
