@@ -1,0 +1,14 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: newv3wl
+  project: bharath
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://artifacts/newv3wl/newv3wl.yaml
+    type: Yaml
+  namespace: kbr
+  placement:
+    selector: rafay.dev/clusterName=testcluster
