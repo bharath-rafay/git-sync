@@ -13,3 +13,5 @@ spec:
   placement:
     selector: rafay.dev/clusterName=testcluster
   version: v3
+
+  
