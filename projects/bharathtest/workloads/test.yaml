@@ -12,4 +12,4 @@ spec:
   namespace: test2
   placement:
     selector: rafay.dev/clusterName=testcluster
-  version: v4
+  version: v5
