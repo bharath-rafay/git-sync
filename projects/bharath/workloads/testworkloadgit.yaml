@@ -5,6 +5,11 @@ metadata:
   project: bharath
 spec:
   artifact:
-    artifact: {}
+    artifact:
+      paths:
+      - name: file://artifacts/testworkloadgit/testworkloadgit.yaml
     type: Yaml
   namespace: kbr
+  placement:
+    selector: rafay.dev/clusterName=testcluster
+  version: testworkloadgit-v1-202403070516420000
