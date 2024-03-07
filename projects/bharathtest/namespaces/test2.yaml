@@ -14,4 +14,17 @@ spec:
     labels:
     - key: rafay.dev/clusterName
       value: testcluster
-  resourceQuotas: {}
+  resourceQuotas: 
+    configMaps: "14"
+    cpuLimits: 4m
+    cpuRequests: 1m
+    memoryLimits: 4Mi
+    memoryRequests: 1Mi
+    persistentVolumeClaims: "4"
+    pods: "4"
+    replicationControllers: "20"
+    secrets: "20"
+    services: "10"
+    servicesLoadBalancers: "2"
+    servicesNodePorts: "2"
+
