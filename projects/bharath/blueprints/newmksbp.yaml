@@ -1,0 +1,19 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Blueprint
+metadata:
+  name: newmksbp
+  project: bharath
+spec:
+  base:
+    name: default
+    version: 2.4.0
+  defaultAddons:
+    csiSecretStoreConfig:
+      providers:
+        aws: true
+    enableCsiSecretStore: true
+    enableIngress: true
+    enableMonitoring: true
+  driftWebhook: {}
+  type: custom
+  version: "3"

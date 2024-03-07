@@ -1,0 +1,7 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Namespace
+metadata:
+  name: testns-46
+  project: bharath
+spec:
+  networkPolicyParams: {}

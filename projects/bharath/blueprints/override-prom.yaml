@@ -1,0 +1,18 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Blueprint
+metadata:
+  name: override-prom
+  project: bharath
+spec:
+  base:
+    name: default
+    version: 2.2.0
+  defaultAddons:
+    enableIngress: true
+    enableMonitoring: true
+    monitoring:
+      helmExporter:
+        enabled: true
+  driftWebhook: {}
+  type: custom
+  version: "2"

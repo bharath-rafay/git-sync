@@ -1,0 +1,14 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Addon
+metadata:
+  name: import
+  project: bharath
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://artifacts/import/test.yaml
+    type: Yaml
+  namespace: kbr
+  sharing: {}
+  version: v3

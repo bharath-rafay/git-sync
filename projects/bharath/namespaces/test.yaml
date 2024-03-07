@@ -1,0 +1,23 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Namespace
+metadata:
+  name: test
+  project: bharath
+spec:
+  limitRange:
+    container: {}
+    pod: {}
+  namespaceMeshPolicyParams: {}
+  placement:
+    labels:
+    - key: rafay.dev/clusterName
+      value: shishir-delete
+    - key: rafay.dev/clusterName
+      value: bharath-eks-ami-test
+    - key: rafay.dev/clusterName
+      value: bharath-nov23
+    - key: rafay.dev/clusterName
+      value: bharath-eks-test4
+    - key: rafay.dev/clusterName
+      value: import-prod
+  resourceQuotas: {}

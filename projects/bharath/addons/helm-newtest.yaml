@@ -1,0 +1,11 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Addon
+metadata:
+  name: helm-newtest
+  project: bharath
+spec:
+  artifact:
+    artifact: {}
+    type: Helm
+  namespace: kbr
+  sharing: {}

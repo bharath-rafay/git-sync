@@ -1,0 +1,18 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Namespace
+metadata:
+  name: test-hpa
+  project: bharath
+spec:
+  limitRange:
+    container: {}
+    pod: {}
+  placement:
+    labels:
+    - key: rafay.dev/clusterName
+      value: bharath-eks-sep92022
+    - key: rafay.dev/clusterName
+      value: bprod
+    - key: rafay.dev/clusterName
+      value: bharath-eks12092022
+  resourceQuotas: {}

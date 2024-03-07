@@ -1,0 +1,14 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Addon
+metadata:
+  name: aproj
+  project: bharath
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://artifacts/aproj/Screenshot 2023-03-15 at 5.10.31 PM.yaml
+    type: Yaml
+  namespace: kbr
+  sharing: {}
+  version: v4
