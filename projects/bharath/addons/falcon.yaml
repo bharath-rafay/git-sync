@@ -9,7 +9,9 @@ spec:
       catalog: default-helm
       chartName: falcon-sensor
       chartVersion: 1.19.1
+      valuesPaths:
+      - name: file://artifacts/falcon/values (1).yaml
     type: Helm
   namespace: kbr
   sharing: {}
-  version: "1"
+  version: "2"
