@@ -1,0 +1,15 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Addon
+metadata:
+  name: falcon
+  project: bharath
+spec:
+  artifact:
+    artifact:
+      catalog: default-helm
+      chartName: falcon-sensor
+      chartVersion: 1.19.1
+    type: Helm
+  namespace: kbr
+  sharing: {}
+  version: "1"
