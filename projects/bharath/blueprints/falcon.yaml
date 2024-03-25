@@ -1,0 +1,15 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Blueprint
+metadata:
+  name: falcon
+  project: bharath
+spec:
+  base:
+    name: minimal
+    version: 2.4.0
+  customAddons:
+  - name: falcon
+    version: "1"
+  driftWebhook: {}
+  type: custom
+  version: "1"
