@@ -1,0 +1,22 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Blueprint
+metadata:
+  name: cluster-standard
+  project: bharath
+spec:
+  base:
+    name: default
+    version: 1.13.0
+  customAddons:
+  - name: alertmanager
+    version: "2"
+  defaultAddons:
+    csiSecretStoreConfig:
+      providers: {}
+  drift:
+    action: Notify
+    enabled: true
+  driftWebhook:
+    enabled: true
+  type: custom
+  version: "4"

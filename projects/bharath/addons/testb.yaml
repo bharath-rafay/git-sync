@@ -1,0 +1,14 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Addon
+metadata:
+  name: testb
+  project: bharath
+spec:
+  artifact:
+    artifact:
+      chartPath:
+        name: file://artifacts/testb/nginx.tgz
+    type: Helm
+  namespace: kbr
+  sharing: {}
+  version: "1"

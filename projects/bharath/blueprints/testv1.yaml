@@ -1,0 +1,15 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Blueprint
+metadata:
+  name: testv1
+  project: bharath
+spec:
+  base:
+    name: default-upstream
+    version: 2.4.0
+  defaultAddons:
+    enableMonitoring: true
+    enableRookCeph: true
+  driftWebhook: {}
+  type: custom
+  version: "1"

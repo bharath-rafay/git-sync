@@ -1,0 +1,33 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Blueprint
+metadata:
+  name: testopasync
+  project: bharath
+spec:
+  base:
+    name: default-aks
+    version: 2.4.0
+  defaultAddons:
+    csiSecretStoreConfig:
+      providers: {}
+    enableCsiSecretStore: true
+    enableIngress: true
+    enableMonitoring: true
+    monitoring:
+      metricsServer:
+        customizationEnabled: true
+      prometheusAdapter:
+        customizationEnabled: true
+  driftWebhook:
+    enabled: true
+  opaPolicy:
+    opaPolicy:
+    - name: policy-restricted
+      version: version-1709959788
+    - name: policy-privileged
+      version: version-1709959788
+    profile:
+      name: default
+      version: latest
+  type: custom
+  version: "2"

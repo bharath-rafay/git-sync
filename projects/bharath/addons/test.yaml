@@ -1,0 +1,13 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Addon
+metadata:
+  name: test
+  project: bharath
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://artifacts/test/test.yaml
+    type: Yaml
+  namespace: bharath
+  sharing: {}

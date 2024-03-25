@@ -1,0 +1,15 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Blueprint
+metadata:
+  name: test23345
+  project: bharath
+spec:
+  base:
+    name: default
+    version: 1.26.0
+  defaultAddons:
+    enableIngress: true
+    enableMonitoring: true
+  driftWebhook: {}
+  type: custom
+  version: "1"

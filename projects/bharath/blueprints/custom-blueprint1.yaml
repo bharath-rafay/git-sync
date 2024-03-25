@@ -1,0 +1,26 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Blueprint
+metadata:
+  name: custom-blueprint1
+  project: bharath
+spec:
+  base:
+    name: default-aks
+    version: 2.4.0
+  defaultAddons:
+    csiSecretStoreConfig:
+      providers: {}
+    enableCsiSecretStore: true
+    enableIngress: true
+    monitoring:
+      metricsServer:
+        customizationEnabled: true
+      prometheusAdapter:
+        customizationEnabled: true
+  drift:
+    action: Deny
+    enabled: true
+  driftWebhook:
+    enabled: true
+  type: custom
+  version: "18"

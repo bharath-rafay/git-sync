@@ -1,0 +1,15 @@
+apiVersion: integrations.k8smgmt.io/v3
+kind: Repository
+metadata:
+  name: gittest
+  project: bharath
+spec:
+  agents:
+  - name: nginx1
+  credentials:
+    password: sealed://credentials.password
+    username: bharath.reddy@rafay.co
+  endpoint: https://github.com/bharath-rafay/git-sync.git
+  secret:
+    name: file://artifacts/gittest/sealed-secret.yaml
+  type: Git

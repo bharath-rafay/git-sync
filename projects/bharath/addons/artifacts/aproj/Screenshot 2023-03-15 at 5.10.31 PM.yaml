@@ -1,0 +1,6 @@
+apiVersion: system.k8smgmt.io/v3
+kind: Project
+metadata:
+  description: for infrastructure management and to enforce governance controls
+  name: central
+spec: {}

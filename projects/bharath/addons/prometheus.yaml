@@ -1,0 +1,16 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Addon
+metadata:
+  name: prometheus
+  project: bharath
+spec:
+  artifact:
+    artifact:
+      valuesPaths:
+      - name: file://temp:/artifacts/prometheus/test/values.yaml
+    options:
+      timeout: 0s
+    type: Helm
+  namespace: kbr
+  sharing: {}
+  version: 15.10.3-7
