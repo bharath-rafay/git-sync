@@ -1,7 +1,0 @@
-apiVersion: integrations.k8smgmt.io/v3
-kind: Repository
-metadata:
-  name: nginx
-  project: bharath
-spec:
-  type: Git
