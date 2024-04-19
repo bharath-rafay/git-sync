@@ -1,0 +1,14 @@
+apiVersion: opa.k8smgmt.io/v3
+kind: OPAConstraintTemplate
+metadata:
+  labels:
+    rafay.dev/opa: template
+  name: test1
+  project: bharath-test
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://artifacts/test1/temp1.yaml
+    options: {}
+    type: Yaml
