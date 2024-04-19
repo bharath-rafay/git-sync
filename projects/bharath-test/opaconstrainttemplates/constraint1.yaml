@@ -13,5 +13,5 @@ spec:
       repository: test1
       revision: master
     options:
-      force: true
+      force: false
     type: Yaml
