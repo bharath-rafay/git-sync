@@ -7,8 +7,6 @@ metadata:
   project: bharath-test
 spec:
   artifact:
-    artifact:
-      paths:
-      - name: file://artifacts/test1/temp1.yaml
+    artifact: {}
     options: {}
     type: Yaml
