@@ -9,6 +9,6 @@ spec:
   artifact:
     artifact:
       paths:
-      - name: file://artifacts/test1/temp1.yaml
+      - name: file://artifacts/test1/temp.yaml
     options: {}
     type: Yaml
