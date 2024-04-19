@@ -1,12 +1,12 @@
 apiVersion: constraints.gatekeeper.sh/v1beta1
 kind: ConstraintTemplate
 metadata:
-  name: exampleconstraint
+  name: exampleconstraint1
 spec:
   crd:
     spec:
       names:
-        kind: ExampleConstraint
+        kind: ExampleConstraint1
   targets:
     - target: admission.k8s.gatekeeper.sh
       rego: |
