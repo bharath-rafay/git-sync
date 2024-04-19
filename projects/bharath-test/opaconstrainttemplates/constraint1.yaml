@@ -12,5 +12,6 @@ spec:
       - name: test1.yaml
       repository: test1
       revision: master
-    options: {}
+    options:
+      force: true
     type: Yaml
