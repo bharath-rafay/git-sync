@@ -3,8 +3,9 @@ kind: OPAConstraintTemplate
 metadata:
   labels:
     rafay.dev/opa: template
+    version: v1
   name: test1
-  project: bharath-test
+  project: bharath-test 
 spec:
   artifact:
     artifact:
