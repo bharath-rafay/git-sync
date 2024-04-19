@@ -7,6 +7,10 @@ metadata:
   project: bharath-test
 spec:
   artifact:
-    artifact: {}
+    artifact:
+      paths:
+      - name: test1.yaml
+      repository: test1
+      revision: master
     options: {}
     type: Yaml
