@@ -3,7 +3,6 @@ kind: OPAConstraintTemplate
 metadata:
   labels:
     rafay.dev/opa: template
-    version: 2
   name: constraint1
   project: bharath-test
 spec:
