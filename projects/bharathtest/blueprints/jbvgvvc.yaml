@@ -1,0 +1,19 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Blueprint
+metadata:
+  name: jbvgvvc
+  project: bharathtest
+spec:
+  base:
+    name: minimal
+    version: 2.4.0
+  customAddons:
+  - name: nginx
+    version: "1"
+  driftWebhook: {}
+  sharing:
+    enabled: true
+    projects:
+    - name: bharath
+  type: custom
+  version: "1"
