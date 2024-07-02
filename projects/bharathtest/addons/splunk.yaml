@@ -1,0 +1,15 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Addon
+metadata:
+  name: splunk
+  project: bharathtest
+spec:
+  artifact:
+    artifact:
+      catalog: default-helm
+      chartName: splunk-connect-for-kubernetes
+      chartVersion: 1.5.4
+    type: Helm
+  namespace: nginx
+  sharing: {}
+  version: "1"
