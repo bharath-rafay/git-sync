@@ -12,3 +12,4 @@ spec:
     type: Helm
   namespace: nginx
   sharing: {}
+  version: "1"
