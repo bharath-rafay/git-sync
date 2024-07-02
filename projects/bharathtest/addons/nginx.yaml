@@ -1,0 +1,20 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Addon
+metadata:
+  name: nginx
+  project: bharathtest
+spec:
+  artifact:
+    artifact:
+      catalog: default-bitnami
+      chartName: nginx
+      chartVersion: 15.14.0
+      valuesRef:
+        repository: workloadtest
+        revision: master
+        valuesPaths:
+        - name: ./values.yaml
+    type: Helm
+  namespace: nginx
+  sharing: {}
+  version: "1"
