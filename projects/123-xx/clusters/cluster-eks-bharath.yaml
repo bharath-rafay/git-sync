@@ -1,6 +1,8 @@
 apiVersion: infra.k8smgmt.io/v3
 kind: Cluster
 metadata:
+  labels:
+    opa: opa
   name: cluster-eks-bharath
   project: 123-xx
 spec:
