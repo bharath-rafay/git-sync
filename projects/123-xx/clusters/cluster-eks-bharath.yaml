@@ -1,0 +1,66 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Cluster
+metadata:
+  labels:
+    opa: opa
+    opa1: ""
+  name: cluster-eks-bharath
+  project: 123-xx
+spec:
+  blueprintConfig:
+    name: test
+    version: "1"
+  cloudCredentials: bharath
+  config:
+    addons:
+    - name: coredns
+      version: v1.10.1-eksbuild.4
+    - name: vpc-cni
+      version: v1.15.1-eksbuild.1
+    - name: kube-proxy
+      version: v1.28.2-eksbuild.2
+    - name: aws-ebs-csi-driver
+      version: latest
+    managedNodeGroups:
+    - amiFamily: AmazonLinux2
+      desiredCapacity: 2
+      iam:
+        withAddonPolicies:
+          autoScaler: true
+      instanceTypes:
+      - t3.large
+      maxSize: 2
+      minSize: 1
+      name: ng-bharath
+      ssh:
+        allow: true
+        publicKeyName: bharath-rocky
+      version: "1.29"
+      volumeSize: 80
+      volumeType: gp3
+    metadata:
+      name: cluster-eks-bharath
+      region: us-west-2
+      tags:
+        email: bharath.reddy@rafay.co
+        env: dev
+      version: "1.29"
+    network:
+      cni:
+        name: aws-cni
+    vpc:
+      cidr: 192.168.0.0/16
+      clusterEndpoints:
+        privateAccess: true
+        publicAccess: false
+      nat:
+        gateway: Single
+  proxyConfig: {}
+  sharing:
+    enabled: true
+    projects:
+    - name: bharath
+    - name: bharath-test
+    - name: bharathquota
+    - name: bharathtest
+  type: aws-eks
