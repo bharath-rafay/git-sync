@@ -26,8 +26,8 @@ spec:
           autoScaler: true
       instanceTypes:
       - t3.large
-      maxSize: 1
-      minSize: 2
+      maxSize: 2
+      minSize: 1
       name: ng-bharath
       ssh:
         allow: true
