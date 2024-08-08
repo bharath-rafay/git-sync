@@ -1,0 +1,15 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: test
+  project: 123-xx
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://artifacts/test/test.yaml
+    type: Yaml
+  namespace: test
+  placement:
+    selector: rafay.dev/clusterName=cluster-eks-bharath
+  version: test-v1-202408080623540000

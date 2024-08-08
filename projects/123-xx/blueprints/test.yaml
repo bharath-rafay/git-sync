@@ -1,0 +1,15 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Blueprint
+metadata:
+  name: test
+  project: 123-xx
+spec:
+  base:
+    name: default
+    version: 2.7.0
+  defaultAddons:
+    enableIngress: true
+    enableMonitoring: true
+  driftWebhook: {}
+  type: custom
+  version: "1"
