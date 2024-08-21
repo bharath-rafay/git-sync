@@ -63,7 +63,7 @@ spec:
           name: test6
           namespace: nginx
         roleName: testrole6
-        roleOnly: true
+        roleOnly: false
       withOIDC: true
     managedNodeGroups:
     - amiFamily: AmazonLinux2
