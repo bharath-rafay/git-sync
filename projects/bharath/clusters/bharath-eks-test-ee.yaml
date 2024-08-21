@@ -20,13 +20,11 @@ spec:
       version: latest
     iam:
       serviceAccounts:
-       - attachPolicyARNs:
+      - attachPolicyARNs:
         - arn:aws:iam::aws:policy/AmazonS3FullAccess
         metadata:
-          name: test5
+          name: test
           namespace: nginx
-        roleName: testrole5
-        roleOnly: true
       - attachPolicyARNs:
         - arn:aws:iam::aws:policy/AmazonS3FullAccess
         metadata:
