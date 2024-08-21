@@ -16,6 +16,16 @@ spec:
       version: v1.16.0-eksbuild.1
     - name: kube-proxy
       version: v1.29.0-eksbuild.1
+    - name: aws-ebs-csi-driver
+      version: latest
+    iam:
+      serviceAccounts:
+      - attachPolicyARNs:
+        - arn:aws:iam::aws:policy/AmazonS3FullAccess
+        metadata:
+          name: test
+          namespace: nginx
+      withOIDC: true
     managedNodeGroups:
     - amiFamily: AmazonLinux2
       desiredCapacity: 2
