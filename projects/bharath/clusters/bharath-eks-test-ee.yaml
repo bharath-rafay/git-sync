@@ -23,11 +23,6 @@ spec:
       - attachPolicyARNs:
         - arn:aws:iam::aws:policy/AmazonS3FullAccess
         metadata:
-          name: test
-          namespace: nginx
-      - attachPolicyARNs:
-        - arn:aws:iam::aws:policy/AmazonS3FullAccess
-        metadata:
           name: test1
           namespace: nginx
       - attachPolicyARNs:
