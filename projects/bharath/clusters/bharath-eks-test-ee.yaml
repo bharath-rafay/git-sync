@@ -25,6 +25,11 @@ spec:
         metadata:
           name: test
           namespace: nginx
+      - attachPolicyARNs:
+        - arn:aws:iam::aws:policy/AmazonS3FullAccess
+        metadata:
+          name: test1
+          namespace: nginx
       withOIDC: true
     managedNodeGroups:
     - amiFamily: AmazonLinux2
