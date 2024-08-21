@@ -30,6 +30,13 @@ spec:
         metadata:
           name: test1
           namespace: nginx
+      - attachPolicyARNs:
+        - arn:aws:iam::aws:policy/AmazonS3FullAccess
+        metadata:
+          name: test1
+          namespace: nginx
+        roleName: testrole1
+        roleOnly: true  
       withOIDC: true
     managedNodeGroups:
     - amiFamily: AmazonLinux2
