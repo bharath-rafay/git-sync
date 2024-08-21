@@ -57,6 +57,12 @@ spec:
           name: test5
           namespace: nginx
         roleName: testrole5
+      - attachPolicyARNs:
+        - arn:aws:iam::aws:policy/AmazonS3FullAccess
+        metadata:
+          name: test6
+          namespace: nginx
+        roleName: testrole6
         roleOnly: true
       withOIDC: true
     managedNodeGroups:
