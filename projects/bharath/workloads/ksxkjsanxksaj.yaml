@@ -1,0 +1,17 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: ksxkjsanxksaj
+  project: bharath
+spec:
+  artifact:
+    artifact:
+      chartPath:
+        name: file://artifacts/ksxkjsanxksaj/airflow-1.0.861-243250-20240105-hotfix-airflow-offcycle-120123-41cec2c6-image-243241-20240105-122releasehf-937f97e2jjsjsjsjs.tgz
+    options:
+      maxHistory: 10
+      timeout: 5m0s
+    type: Helm
+  namespace: kbr
+  placement:
+    selector: rafay.dev/clusterName=bharath-eks-409

@@ -1,0 +1,15 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: nginx1
+  project: bharath
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://artifacts/nginx1/nginx1.yaml
+    type: Yaml
+  namespace: test
+  placement:
+    selector: rafay.dev/clusterName=mks-bharat
+  version: nginx1-v1-202501230453160000

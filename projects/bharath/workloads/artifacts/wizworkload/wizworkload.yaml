@@ -1,0 +1,73 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    rep-container: 28o5xwe-test
+    rep-organization: w2lrw62
+    rep-partner: rx28oml
+    rep-version: rx28oml
+    rep-workload: 28o5xwe
+  name: test
+  namespace: nginx
+spec:
+  ports:
+  - name: test
+    port: 80
+    protocol: TCP
+    targetPort: 80
+  selector:
+    rep-app: test
+  type: ClusterIP
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    rafay.dev/registry-2q0e0jm: system-default-registry
+  labels:
+    rep-app: test
+    rep-organization: w2lrw62
+    rep-partner: rx28oml
+    rep-workload: 28o5xwe
+  name: test
+  namespace: nginx
+spec:
+  minReadySeconds: 10
+  progressDeadlineSeconds: 300
+  selector:
+    matchLabels:
+      rep-app: test
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      annotations: {}
+      labels:
+        rep-app: test
+        rep-organization: w2lrw62
+        rep-partner: rx28oml
+        rep-workload: 28o5xwe
+    spec:
+      containers:
+      - args: []
+        command: []
+        env: []
+        envFrom: []
+        image: rcr.rafay-edge.net/rafaycommunity/rafaycommunityuser/testapp:v2.0
+        imagePullPolicy: IfNotPresent
+        name: test
+        ports:
+        - containerPort: 80
+          name: test
+          protocol: TCP
+        resources:
+          limits:
+            cpu: 250m
+            memory: 1024Mi
+          requests:
+            cpu: 237m
+            memory: 972Mi
+      dnsPolicy: ClusterFirstWithHostNet
+      restartPolicy: Always
+      tolerations: []

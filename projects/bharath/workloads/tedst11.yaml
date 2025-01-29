@@ -1,0 +1,15 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: tedst11
+  project: bharath
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://artifacts/tedst11/tedst11.yaml
+    type: Yaml
+  namespace: kbr
+  placement:
+    selector: rafay.dev/clusterName=bharath-import
+  version: tedst11-v3

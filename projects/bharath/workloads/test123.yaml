@@ -1,0 +1,19 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: test123
+  project: bharath
+spec:
+  artifact:
+    artifact:
+      chartPath:
+        name: file://artifacts/test123/chaos-mesh-2.6.3.tgz
+      valuesPaths:
+      - name: file://artifacts/test123/chaos-val.yaml
+    options:
+      maxHistory: 10
+      timeout: 5m0s
+    type: Helm
+  namespace: chaos-mesh
+  placement:
+    selector: rafay.dev/clusterName=test1

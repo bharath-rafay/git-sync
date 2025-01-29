@@ -1,0 +1,15 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: egssgsgs
+  project: bharath
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://artifacts/egssgsgs/egssgsgs.yaml
+    type: Yaml
+  namespace: nginx
+  placement:
+    selector: rafay.dev/clusterName=bharath-eksctl5
+  version: egssgsgs-v1-202404080940390000

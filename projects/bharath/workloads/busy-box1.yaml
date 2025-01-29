@@ -1,0 +1,15 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: busy-box1
+  project: bharath
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://artifacts/busy-box1/busy-box1.yaml
+    type: Yaml
+  namespace: testns-1
+  placement:
+    selector: rafay.dev/clusterName=mks-bharat
+  version: busy-box1-v1-202501230454260000

@@ -1,0 +1,15 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: wizworkload
+  project: bharath
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://artifacts/wizworkload/wizworkload.yaml
+    type: Yaml
+  namespace: nginx
+  placement:
+    selector: rafay.dev/clusterName=eks-cluster-bharath-21212
+  version: wizworkload-v1-202405300901240000

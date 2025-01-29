@@ -1,0 +1,11 @@
+# stuck-pod.yaml
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: stuck-pod
+spec:
+  containers:
+  - name: busybox
+    image: busybox
+    command: ["sh", "-c", "echo 'Stuck...'; while true; do sleep 3600; done"]  # This command runs an infinite loop, causing the container to never complete

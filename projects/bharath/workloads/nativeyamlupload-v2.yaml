@@ -1,0 +1,16 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: nativeyamlupload-v2
+  project: bharath
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://test.yaml
+    options: {}
+    type: Yaml
+  namespace: testkkkkkkkkkkkkkkkkkk
+  placement:
+    selector: rafay.dev/clusterName=bharath-eks-07-03-2023
+  version: nativeyamlupload-v2-v1-1

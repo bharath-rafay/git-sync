@@ -1,0 +1,15 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: new-sec-workload
+  project: bharath
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://artifacts/new-sec-workload/new-sec-workload.yaml
+    type: Yaml
+  namespace: nginx
+  placement:
+    selector: rafay.dev/clusterName in (bharath-eks-cluster-2,bharath-eks-clustertest1)
+  version: new-sec-workload-v5-202411140837160000

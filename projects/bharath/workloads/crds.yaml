@@ -1,0 +1,15 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: crds
+  project: bharath
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://artifacts/crds/crds.yaml
+    type: Yaml
+  namespace: nginx
+  placement:
+    selector: rafay.dev/clusterName=test-mks-bharath
+  version: crds-v5-202411190508190000

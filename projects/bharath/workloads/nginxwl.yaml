@@ -1,0 +1,24 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: nginxwl
+  project: bharath
+spec:
+  artifact:
+    artifact:
+      catalog: default-bitnami
+      chartName: nginx
+      chartVersion: 18.2.2
+      valuesRef:
+        repository: new
+        revision: main
+        valuesPaths:
+        - name: /values.yaml
+    options:
+      maxHistory: 10
+      timeout: 5m0s
+    type: Helm
+  namespace: ns1
+  placement:
+    selector: rafay.dev/clusterName=bharath-eks-clustertest1
+  version: nginxwl-v14
