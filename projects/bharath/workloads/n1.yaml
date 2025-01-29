@@ -5,6 +5,11 @@ metadata:
   project: bharath
 spec:
   artifact:
-    artifact: {}
+    artifact:
+      paths:
+      - name: file://artifacts/n1/n1.yaml
     type: Yaml
   namespace: ns1
+  placement:
+    selector: rafay.dev/clusterName=mks-bharat
+  version: n1-v1-202501290516570000
