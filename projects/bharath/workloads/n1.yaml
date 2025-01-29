@@ -1,0 +1,10 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: n1
+  project: bharath
+spec:
+  artifact:
+    artifact: {}
+    type: Yaml
+  namespace: ns1

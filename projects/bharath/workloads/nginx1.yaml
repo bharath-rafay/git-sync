@@ -12,4 +12,4 @@ spec:
   namespace: test
   placement:
     selector: rafay.dev/clusterName=mks-bharat
-  version: nginx1-v1-202501230453160000
+  version: nginx1-v2-202501290514080000
