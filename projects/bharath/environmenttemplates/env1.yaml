@@ -50,6 +50,12 @@ spec:
       dedicated: true
       version: "1.0"
     type: dynamic
+  - kind: resourcetemplate
+    name: template5
+    resourceOptions:
+      dedicated: true
+      version: "1.0"
+    type: dynamic
   secret:
     name: file://artifacts/env1/sealed-secret.yaml
   variables:
@@ -61,5 +67,5 @@ spec:
       required: true
     value: rds-envmgr
     valueType: text
-  version: "3"
+  version: v4
   versionState: active
