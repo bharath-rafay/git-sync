@@ -1,0 +1,24 @@
+apiVersion: eaas.envmgmt.io/v1
+kind: Driver
+metadata:
+  name: drive-test-1
+  project: bharath
+spec:
+  config:
+    container:
+      arguments:
+      - --log-level=3
+      commands:
+      - run main.go
+      envVars:
+        ENVPROCESSOR_ENVIRONMENT_NAME: sealed://driverconfig.container.envs.ENVPROCESSOR_ENVIRONMENT_NAME
+      image: nginx
+      imagePullCredentials:
+        password: sealed://registry_credentials
+        registry: hub.docker.io
+        username: akhil
+    maxRetryCount: 3
+    timeoutSeconds: 100
+    type: container
+  secret:
+    name: file://artifacts/drive-test-1/sealed-secret.yaml
