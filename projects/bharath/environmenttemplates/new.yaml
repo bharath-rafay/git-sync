@@ -14,5 +14,15 @@ spec:
     resourceOptions:
       version: "1.0"
     type: dynamic
+  - kind: resourcetemplate
+    name: template3
+    resourceOptions:
+      version: "1.0"
+    type: dynamic
+  - kind: resourcetemplate
+    name: template1
+    resourceOptions:
+      version: "1.0"
+    type: dynamic
   version: v1
   versionState: active
