@@ -1,0 +1,99 @@
+apiVersion: eaas.envmgmt.io/v1
+kind: ResourceTemplate
+metadata:
+  name: template4
+  project: bharath
+spec:
+  agents:
+  - name: new
+  artifactWorkflowHandler:
+    name: drive-test-1
+  contexts:
+  - name: system-dns-config
+  hooks:
+    provider:
+      terraform:
+        deploy:
+          init:
+            after:
+            - name: internal-approval
+              onFailure: unspecified
+              options:
+                approval:
+                  internal: {}
+                  type: internal
+              type: approval
+            before:
+            - executeOnce: true
+              name: infracost
+              onFailure: continue
+              options:
+                container:
+                  arguments:
+                  - --verbose
+                  commands:
+                  - scan
+                  envvars:
+                    DOWNLOAD_TOKEN: sealed://hook.terraform.deploy.init.before.infracost.options.container.env_vars.DOWNLOAD_TOKEN
+                    DOWNLOAD_URL: sealed://hook.terraform.deploy.init.before.infracost.options.container.env_vars.DOWNLOAD_URL
+                  image: eaasunittest/infracost:demo
+                  workingDirPath: /workdir
+              type: container
+          output:
+            before:
+            - name: webhook
+              onFailure: unspecified
+              options:
+                http:
+                  body: request-body
+                  endpoint: https://jsonplaceholder.typicode.com/todos/1
+                  headers:
+                    X-TOKEN: sealed://hook.terraform.deploy.output.before.webhook.options.http.headers.X-TOKEN
+                  method: POST
+                  successCondition: 200OK
+              type: http
+  provider: terraform
+  providerOptions:
+    terraform:
+      backendConfigs:
+      - path
+      backendType: custom
+      lock: true
+      lockTimeoutSeconds: 1
+      pluginDirs:
+      - path
+      refresh: true
+      varFiles:
+      - path
+      version: v1.4.4
+    workflowHandler:
+      data:
+        config:
+          http:
+            endpoint: https://jsonplaceholder.typicode.com/todos/1
+            method: GET
+          type: http
+        inputs:
+        - data:
+            variables:
+            - name: name
+              options:
+                description: this is the resource name to be applied
+                required: true
+              value: aws-elasticache
+              valueType: text
+          name: some-cc
+        outputs:
+          key1: value1
+          key2: value2
+  secret:
+    name: file://artifacts/template4/sealed-secret.yaml
+  variables:
+  - name: name
+    options:
+      description: this is the resource name to be applied
+      required: true
+    value: aws-elasticache
+    valueType: text
+  version: "1.0"
+  versionState: active
