@@ -1,0 +1,17 @@
+apiVersion: eaas.envmgmt.io/v1
+kind: Driver
+metadata:
+  name: karpenter
+  project: bharath
+spec:
+  config:
+    container:
+      envVars:
+        ENV: sealed://driverconfig.container.envs.ENV
+      image: registry.dev.rafay-edge.net/rafay/opentofu-driver:v2.10.x-2
+      imagePullCredentials:
+        password: sealed://registry_credentials
+        username: bharath.reddy@rafay.co
+    type: container
+  secret:
+    name: file://artifacts/karpenter/sealed-secret.yaml
