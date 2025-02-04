@@ -1,0 +1,47 @@
+apiVersion: eaas.envmgmt.io/v1
+kind: EnvironmentTemplate
+metadata:
+  name: env1
+  project: bharath
+spec:
+  agents:
+  - name: new
+  hooks:
+    onInit:
+    - agents:
+      - name: new
+      description: this is an infracost hook
+      executeOnce: true
+      name: infracost
+      onFailure: continue
+      options:
+        http:
+          body: initializing environment template
+          endpoint: https://some-endpoint.com/post
+          headers:
+            KEY: sealed://hook.onInit.infracost.options.http.headers.KEY
+            TOKEN: sealed://hook.onInit.infracost.options.http.headers.TOKEN
+          method: POST
+          successCondition: 200 OK
+      timeoutSeconds: 1000
+      type: http
+  resources:
+  - kind: resourcetemplate
+    name: template1
+    resourceOptions:
+      dedicated: true
+      version: "1.0"
+    type: dynamic
+  secret:
+    name: file://artifacts/env1/sealed-secret.yaml
+  variables:
+  - name: name
+    options:
+      description: this is a dummy variable
+      override:
+        type: allowed
+      required: true
+    value: rds-envmgr
+    valueType: text
+  version: "1"
+  versionState: active
