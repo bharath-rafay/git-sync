@@ -11,6 +11,15 @@ spec:
   config:
     accessConfig:
       authenticationMode: CONFIG_MAP
+    addons:
+    - name: coredns
+      version: latest
+    - name: kube-proxy
+      version: latest
+    - name: vpc-cni
+      version: latest
+    - name: aws-ebs-csi-driver
+      version: latest
     managedNodeGroups:
     - amiFamily: AmazonLinux2
       desiredCapacity: 1
@@ -22,7 +31,7 @@ spec:
       maxSize: 1
       minSize: 1
       name: ng-bharath
-      version: "1.30"
+      version: "1.29"
       volumeSize: 80
       volumeType: gp3
     metadata:
@@ -31,7 +40,7 @@ spec:
       tags:
         email: bharath.reddy@rafay.co
         env: dev
-      version: "1.30"
+      version: "1.29"
     network:
       cni:
         name: aws-cni
