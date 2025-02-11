@@ -1,0 +1,45 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Cluster
+metadata:
+  name: bharath-eks-test
+  project: bharath
+spec:
+  blueprintConfig:
+    name: minimal
+    version: Latest
+  cloudCredentials: bharatrole
+  config:
+    accessConfig:
+      authenticationMode: CONFIG_MAP
+    managedNodeGroups:
+    - amiFamily: AmazonLinux2
+      desiredCapacity: 1
+      iam:
+        withAddonPolicies:
+          autoScaler: true
+      instanceTypes:
+      - t3.large
+      maxSize: 1
+      minSize: 1
+      name: ng-bharath
+      version: "1.29"
+      volumeSize: 80
+      volumeType: gp3
+    metadata:
+      name: bharath-eks-test
+      region: us-west-2
+      tags:
+        email: bharath.reddy@rafay.co
+        env: dev
+      version: "1.29"
+    network:
+      cni:
+        name: aws-cni
+    vpc:
+      cidr: 192.168.0.0/16
+      clusterEndpoints:
+        privateAccess: true
+        publicAccess: false
+      nat:
+        gateway: Single
+  type: aws-eks
