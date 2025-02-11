@@ -18,31 +18,6 @@ spec:
       version: latest
     - name: aws-ebs-csi-driver
       version: latest
-    iam:
-      serviceAccounts:
-      - attachPolicy:
-          Statement:
-          - Action: ec2:Describe*
-            Effect: Allow
-            Resource: '*'
-          - Action:
-            - ec2:AttachVolume
-            Effect: Allow
-            Resource: '*'
-          - Action: ec2:DetachVolume
-            Effect: Allow
-            Resource: '*'
-          - Action:
-            - elasticloadbalancing:*
-            Effect: Allow
-            Resource:
-            - '*'
-          Version: "2012-10-17"
-        metadata:
-          name: test-irsa
-          namespace: yaml1
-        roleOnly: false
-      withOIDC: true
     managedNodeGroups:
     - amiFamily: AmazonLinux2
       desiredCapacity: 2
