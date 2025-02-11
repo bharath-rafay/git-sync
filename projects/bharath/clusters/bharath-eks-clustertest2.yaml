@@ -103,7 +103,7 @@ spec:
       tags:
         email: bharath.reddy@rafay.co
         env: dev
-      version: "1.30"
+      version: "1.31"
     network:
       cni:
         name: aws-cni
