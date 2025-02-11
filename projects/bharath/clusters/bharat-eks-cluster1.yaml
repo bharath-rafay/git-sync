@@ -22,7 +22,7 @@ spec:
       maxSize: 1
       minSize: 1
       name: ng-bharath
-      version: "1.29"
+      version: "1.30"
       volumeSize: 80
       volumeType: gp3
     metadata:
@@ -31,7 +31,7 @@ spec:
       tags:
         email: bharath.reddy@rafay.co
         env: dev
-      version: "1.29"
+      version: "1.30"
     network:
       cni:
         name: aws-cni
