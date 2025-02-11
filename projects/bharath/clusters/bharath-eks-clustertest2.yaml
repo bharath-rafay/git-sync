@@ -52,7 +52,7 @@ spec:
       spot: false
       tags:
         bp: minimal
-      version: "1.30"
+      version: "1.31"
       volumeEncrypted: false
       volumeIOPS: 3000
       volumeSize: 80
