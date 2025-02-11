@@ -46,5 +46,4 @@ spec:
         publicAccess: false
       nat:
         gateway: Single
-  proxyConfig: {}
   type: aws-eks
