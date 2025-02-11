@@ -1,0 +1,43 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Cluster
+metadata:
+  name: ha-bharath
+  project: bharath
+spec:
+  blueprint:
+    name: minimal
+  config:
+    autoApproveNodes: true
+    highAvailability: true
+    installerTtl: 365
+    kubernetesVersion: v1.30.4
+    network:
+      cni:
+        name: Calico
+        version: 3.28.1
+      podSubnet: 10.244.0.0/16
+      serviceSubnet: 10.96.0.0/12
+    nodes:
+    - arch: amd64
+      hostname: bharath-ubu-ha1
+      operatingSystem: Ubuntu20.04
+      privateIP: 11.0.1.215
+      roles:
+      - Worker
+      - ControlPlane
+    - arch: amd64
+      hostname: bharath-ubu-ha3
+      operatingSystem: Ubuntu20.04
+      privateIP: 11.0.1.25
+      roles:
+      - Worker
+      - ControlPlane
+    - arch: amd64
+      hostname: bharath-ha-2-ubuntu
+      operatingSystem: Ubuntu20.04
+      privateIP: 11.0.1.87
+      roles:
+      - Worker
+      - ControlPlane
+  proxy: {}
+  type: mks
