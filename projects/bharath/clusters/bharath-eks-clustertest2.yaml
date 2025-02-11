@@ -51,7 +51,7 @@ spec:
       privateNetworking: true
       spot: false
       tags:
-        bp: minimal
+        bp: minimal12
       version: "1.30"
       volumeEncrypted: false
       volumeIOPS: 3000
@@ -90,7 +90,7 @@ spec:
       privateNetworking: true
       spot: false
       tags:
-        bp: minimal
+        bp: minimal2
       version: "1.30"
       volumeEncrypted: false
       volumeIOPS: 3000
