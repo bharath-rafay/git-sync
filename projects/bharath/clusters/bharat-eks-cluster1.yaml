@@ -31,7 +31,7 @@ spec:
       maxSize: 1
       minSize: 1
       name: ng-bharath
-      version: "1.30"
+      version: "1.29"
       volumeSize: 80
       volumeType: gp3
     metadata:
