@@ -5,7 +5,7 @@ metadata:
   project: bharath
 spec:
   blueprint:
-    name: minimal
+    name: default
   config:
     autoApproveNodes: true
     installerTtl: 365
