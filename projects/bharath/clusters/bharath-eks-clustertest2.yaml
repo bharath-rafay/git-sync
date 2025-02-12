@@ -59,7 +59,7 @@ spec:
       volumeThroughput: 125
       volumeType: gp3
     - amiFamily: AmazonLinux2
-      desiredCapacity: 2
+      desiredCapacity: 1
       disableIMDSv1: false
       disablePodIMDS: false
       ebsOptimized: false
