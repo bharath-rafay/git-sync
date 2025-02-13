@@ -46,7 +46,7 @@ spec:
         dedicated: "true"
       maxPodsPerNode: 50
       maxSize: 2
-      minSize: 1
+      minSize: 0
       name: ng-1
       privateNetworking: true
       spot: false
@@ -85,7 +85,7 @@ spec:
         dedicated: "true"
       maxPodsPerNode: 50
       maxSize: 2
-      minSize: 1
+      minSize: 0
       name: ng-2
       privateNetworking: true
       spot: false
