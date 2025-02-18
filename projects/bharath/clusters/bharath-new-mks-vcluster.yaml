@@ -16,5 +16,13 @@ spec:
         version: 3.28.1
       podSubnet: 10.244.0.0/16
       serviceSubnet: 10.96.0.0/12
+    nodes:
+    - arch: x86_64
+      hostname: bharath-rocky-vcluster
+      operatingSystem: Rocky9.5
+      privateIP: 10.0.0.251
+      roles:
+      - Worker
+      - ControlPlane
   proxy: {}
   type: mks
