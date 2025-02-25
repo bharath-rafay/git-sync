@@ -1,0 +1,80 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Cluster
+metadata:
+  name: bharath-eks-clustertest
+  project: bharath
+spec:
+  blueprintConfig:
+    name: minimal
+  cloudCredentials: bharath
+  config:
+    addons:
+    - configurationValues: '{"enableNetworkPolicy":"true", "env": {"AWS_VPC_K8S_CNI_EXTERNALSNAT":
+        "true"}}'
+      name: vpc-cni
+      version: v1.19.0-eksbuild.1
+    - name: coredns
+      version: v1.11.1-eksbuild.8
+    - name: kube-proxy
+      version: v1.29.10-eksbuild.3
+    - name: aws-ebs-csi-driver
+      version: latest
+    managedNodeGroups:
+    - amiFamily: AmazonLinux2
+      desiredCapacity: 1
+      disableIMDSv1: false
+      disablePodIMDS: false
+      ebsOptimized: false
+      efaEnabled: false
+      enableDetailedMonitoring: false
+      iam:
+        withAddonPolicies:
+          albIngress: false
+          appMesh: false
+          appMeshPreview: false
+          autoScaler: true
+          certManager: false
+          cloudWatch: false
+          ebs: false
+          efs: false
+          externalDNS: false
+          fsx: false
+          imageBuilder: true
+          xRay: false
+      instanceType: t3.large
+      labels:
+        app: infra
+        dedicated: "true"
+      maxPodsPerNode: 50
+      maxSize: 2
+      minSize: 0
+      name: ng-1
+      privateNetworking: true
+      spot: false
+      tags:
+        bp: minimal1
+      version: "1.30"
+      volumeEncrypted: false
+      volumeIOPS: 3000
+      volumeSize: 80
+      volumeThroughput: 125
+      volumeType: gp3
+    metadata:
+      name: bharath-eks-clustertest
+      region: us-west-2
+      tags:
+        email: bharath.reddy@rafay.co
+        env: dev
+      version: "1.30"
+    network:
+      cni:
+        name: aws-cni
+    vpc:
+      autoAllocateIPv6: false
+      cidr: 192.168.0.0/16
+      clusterEndpoints:
+        privateAccess: true
+        publicAccess: false
+      nat:
+        gateway: Single
+  type: aws-eks
