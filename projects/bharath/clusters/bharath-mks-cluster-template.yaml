@@ -22,23 +22,6 @@ spec:
       serviceSubnet: 10.96.0.0/12
     nodes:
     - arch: amd64
-      hostname: bharath-template2
-      kubeletExtraArgs:
-        cpu-manager-reconcile-period: 40s
-        max-pods: "400"
-      labels:
-        app: infra
-        infra: "true"
-      operatingSystem: Ubuntu22.04
-      privateIP: 11.0.1.107
-      roles:
-      - Worker
-      ssh:
-        ipAddress: 144.24.18.107
-        port: "22"
-        privateKeyPath: /home/bharat/Downloads/ssh-key-2025-01-23.key
-        username: ubuntu
-    - arch: amd64
       hostname: bharath-template1
       kubeletExtraArgs:
         cpu-manager-reconcile-period: 30s
@@ -46,6 +29,7 @@ spec:
       labels:
         app: infra
         infra: "true"
+        katacontainers.io/kata-runtime: "true"
       operatingSystem: Ubuntu22.04
       privateIP: 11.0.1.168
       roles:
@@ -53,6 +37,24 @@ spec:
       - Worker
       ssh:
         ipAddress: 129.146.19.230
+        port: "22"
+        privateKeyPath: /home/bharat/Downloads/ssh-key-2025-01-23.key
+        username: ubuntu
+    - arch: amd64
+      hostname: bharath-template2
+      kubeletExtraArgs:
+        cpu-manager-reconcile-period: 40s
+        max-pods: "400"
+      labels:
+        app: infra
+        infra: "true"
+        katacontainers.io/kata-runtime: "true"
+      operatingSystem: Ubuntu22.04
+      privateIP: 11.0.1.107
+      roles:
+      - Worker
+      ssh:
+        ipAddress: 144.24.18.107
         port: "22"
         privateKeyPath: /home/bharat/Downloads/ssh-key-2025-01-23.key
         username: ubuntu
