@@ -1,0 +1,8 @@
+apiVersion: eaas.envmgmt.io/v1
+kind: Driver
+metadata:
+  name: repo-driver-custom
+  project: bharath
+spec:
+  config:
+    type: container
