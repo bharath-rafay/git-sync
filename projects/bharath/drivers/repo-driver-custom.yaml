@@ -5,4 +5,11 @@ metadata:
   project: bharath
 spec:
   config:
+    container:
+      image: http://registry.dev.rafay-edge.net/bharath/repo-driver:v1-26022025
+      imagePullCredentials:
+        password: sealed://registry_credentials
+        username: bharath.reddy@rafay.co
     type: container
+  secret:
+    name: file://artifacts/repo-driver-custom/sealed-secret.yaml
